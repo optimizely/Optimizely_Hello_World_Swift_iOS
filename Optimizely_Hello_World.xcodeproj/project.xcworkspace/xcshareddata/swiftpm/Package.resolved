@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Optimizely",
+        "repositoryURL": "https://github.com/optimizely/swift-sdk.git",
+        "state": {
+          "branch": null,
+          "revision": "35811897117502b1b871dcceee5efcd1e1941290",
+          "version": "3.1.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
