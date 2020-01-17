@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/optimizely/swift-sdk.git",
         "state": {
           "branch": null,
-          "revision": "35811897117502b1b871dcceee5efcd1e1941290",
-          "version": "3.1.0"
+          "revision": "eafb6daaba9964fc749cdf250512dc590dcdf9db",
+          "version": "3.2.1"
         }
       }
     ]

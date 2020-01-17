@@ -33,12 +33,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let notificationCenter = optimizely.notificationCenter
             
             //notification fired when a value is returned by isFeatureEnabled function call
-        _ = notificationCenter.addDecisionNotificationListener(decisionListener: { (type, userId, attributes, decisionInfo) in
+        _ = notificationCenter?.addDecisionNotificationListener(decisionListener: { (type, userId, attributes, decisionInfo) in
             print("Received decision notification: \(type) \(userId) \(String(describing: attributes)) \(decisionInfo)")
         })
 
             //notification fired when SDK polls for a new datafile and the datafile has changed
-        _ = notificationCenter.addDatafileChangeNotificationListener(datafileListener: { (_) in
+        _ = notificationCenter?.addDatafileChangeNotificationListener(datafileListener: { (_) in
             print("data file did change!")
         })
     }
