@@ -13,12 +13,13 @@ class ViewController: UIViewController {
   let delegate = UIApplication.shared.delegate as! AppDelegate
 
     @IBAction func showMessage(sender: UIButton) {
+        var enabled = false
         let userId = "user123"
         let attributes: [String: Any] = [
             "customerId": 123,   // Attributes used for targeted audience-based rollout
             "isVip": true,
         ]
-        let enabled = delegate.optimizely.isFeatureEnabled(featureKey: "hello_world", userId: userId, attributes: attributes)
+        enabled = delegate.optimizely.isFeatureEnabled(featureKey: "hello_world", userId: userId, attributes: attributes)
         print("Feature is enabled? - \(enabled) for userId: \(userId)")
         
         let alertController = UIAlertController(title: "Alert", message: enabled ? "Hello World!" : "Nothing to see here...", preferredStyle: UIAlertController.Style.alert)
@@ -31,7 +32,5 @@ class ViewController: UIViewController {
         
         present(alertController, animated: true, completion: nil)
     }
-
-
 }
 
